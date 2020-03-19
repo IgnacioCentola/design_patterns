@@ -18,9 +18,13 @@ public class Main {
         AddOnDecorator soyDecorator =
                 new SoyDecorator(new ChocolateDecorator(latte));
 
+        AddOnDecorator allAddOnsDecorator =
+                new CaramelDecorator(new SoyDecorator(new ChocolateDecorator(latte)));
+
 
         printBeverage(caramelDecorator);
         printBeverage(soyDecorator);
+        printBeverage(allAddOnsDecorator);
     }
 
     static public void printBeverage(Beverage beverage) {
