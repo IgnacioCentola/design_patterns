@@ -8,6 +8,17 @@ import command.receiver.concrete_receiver.Light;
 
 public class Main {
     public static void main(String[] args) {
+
+        /*
+        Undo-command logic not implemented in this case fo the sake of
+        simplicity
+
+        Keep in mind that this pattern implements some sort of state management
+        as well to keep track of executions and undo-tions (and this case
+        , e.g. to keep track of the light intensity to fetch that state every time
+        it is turned on)
+         */
+
         Light light = new Light();
         Invoker invoker =
                 new Invoker(new LightOnCommand(light),
@@ -20,7 +31,7 @@ public class Main {
         invoker.executeUp();
 
         System.out.println("Light on: " + light.isLightOn());
-        System.out.println(String.format("Light intensity: %d %%" , light.getLightIntensity()));
+        System.out.println(String.format("Light intensity: %d %%", light.getLightIntensity()));
 
         invoker.executeOff();
         invoker.executeUp();
@@ -29,6 +40,6 @@ public class Main {
         System.out.println();
 
         System.out.println("Light on: " + light.isLightOn());
-        System.out.println(String.format("Light intensity: %d %%" , light.getLightIntensity()));
+        System.out.println(String.format("Light intensity: %d %%", light.getLightIntensity()));
     }
 }
