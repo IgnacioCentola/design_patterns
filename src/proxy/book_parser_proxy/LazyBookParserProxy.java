@@ -1,6 +1,5 @@
 package proxy.book_parser_proxy;
 
-import proxy.FakeBookGenerator;
 import proxy.concrete_subjects.BookParser;
 import proxy.subject_interface.IBookParser;
 
