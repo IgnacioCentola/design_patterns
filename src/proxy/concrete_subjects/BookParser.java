@@ -4,7 +4,7 @@ import proxy.subject_interface.IBookParser;
 
 public class BookParser implements IBookParser {
 
-    private int numWords;
+    private final int numWords;
 
     public BookParser(String book) {
         numWords = WordCounter.countWords(book);

@@ -5,7 +5,7 @@ import proxy.subject_interface.IBookParser;
 
 public class LazyBookParserProxy implements IBookParser {
     private BookParser bookParser = null;
-    private String book;
+    private final String book;
 
     public LazyBookParserProxy(String book) {
         this.book = book;

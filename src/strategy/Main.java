@@ -9,8 +9,8 @@ import strategy.strategies.quacking.NoQuackingBehaviour;
 
 public class Main {
     public static void main(String[] args) {
-       Duck countryDuck = new Duck("Steve", new LoudQuackingBehaviour(),
-               new JetFlyingBehaviour(), new DisplayAsTextBehaviour());
+       Duck countryDuck = new Duck("Peter", new LoudQuackingBehaviour(), 
+       new JetFlyingBehaviour(), new DisplayAsTextBehaviour());
 
         showDuckInfo(countryDuck);
 
